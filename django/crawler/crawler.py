@@ -15,7 +15,6 @@ class EpisodeData:
     def __str__(self):
         return f'에피소드ID: {self.episode_id} (제목: {self.title}, 별점: {self.rating}, 등록일: {self.created_date})'
 
-
 def get_episode_list(webtoon_id, page):
 
     url = 'https://comic.naver.com/webtoon/list.nhn'

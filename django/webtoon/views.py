@@ -1,5 +1,4 @@
 from django.shortcuts import render
-
 from .models import Webtoon
 
 def webtoon_list(request):
@@ -12,7 +11,6 @@ def webtoon_list(request):
         template_name='webtoon/webtoon_list.html',
         context=context,
     )
-
 
 def webtoon_detail(request, pk):
     context = {

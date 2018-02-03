@@ -1,6 +1,6 @@
 from django.db import models
-
 from crawler.crawler import EpisodeData, get_episode_list
+
 
 class Webtoon(models.Model):
     webtoon_id = models.CharField(max_length=200)
