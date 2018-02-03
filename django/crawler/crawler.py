@@ -18,7 +18,7 @@ class EpisodeData:
 
 def get_episode_list(webtoon_id, page):
 
-    url = 'https://comic.naver.com/config/list.nhn'
+    url = 'https://comic.naver.com/webtoon/list.nhn'
     params = {
         'titleId': webtoon_id,
         'page': page,

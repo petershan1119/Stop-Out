@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Webtoon Detail</title>
+</head>
+<body>
+<h1>{{ webtoon.title }} ({{ webtoon.webtoon_id }})</h1>
+{% for episode in webtoon.episode_set.all %}
+<ul>
+    <li>Episode ID: {{ episode.episode_id }}</li>
+    <li>Title: {{ episode.title }}</li>
+    <li>Rating: {{ episode.rating }}</li>
+    <li>Created Date: {{ episode.created_date }}</li>
+</ul>
+{% endfor %}
+</body>
+</html>
