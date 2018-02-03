@@ -1,6 +1,7 @@
 from django.db import models
 from crawler import crawler
 
+
 class Webtoon(models.Model):
     webtoon_id = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
@@ -13,7 +14,8 @@ class Webtoon(models.Model):
 
         for episode in episode_list:
             if not self.episode_set.all().filter(episode_id=episode.episode_id).exists():
-                self.episode_set.create(episode_id=episode.episode_id, title=episode.title, rating=episode.rating, created_date=episode.created_date)
+                self.episode_set.create(episode_id=episode.episode_id, title=episode.title,
+                                        rating=episode.rating, created_date=episode.created_date)
 
 
 class Episode(models.Model):
